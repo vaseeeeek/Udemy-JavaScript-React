@@ -1,20 +1,20 @@
-"use strict";
+//"use strict";
 
-const obg = { // объект
-    name: 'John',
-    age: '25',
-    isMarried: 'false'
-};
+//const obg = { // объект
+//     name: 'John',
+//     age: '25',
+//     isMarried: 'false'
+// };
 
-console.log(obg.age); // вывод возвраста 
+// console.log(obg.age); // вывод возвраста 
 
-let arr = ['plum.png', 'orange', 6, 'apple.bmp']  //массив
+// let arr = ['plum.png', 'orange', 6, 'apple.bmp']  //массив
 
-console.log(arr[2])
+// console.log(arr[2])
 
 
-const answers = [];
+// const answers = [];
 
-answers[1] = prompt('Имя');
-answers[2] = prompt('Фамилия');
-answers[3] = prompt('Возвраст');
+// answers[1] = prompt('Имя');
+// answers[2] = prompt('Фамилия');
+// answers[3] = prompt('Возвраст');
