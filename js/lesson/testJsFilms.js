@@ -1,46 +1,36 @@
-// Задание на урок:
+'use strict';
 
-// 1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
-// 'Сколько фильмов вы уже посмотрели?'
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели', '');
 
-// 2) Создать объект personalMovieDB и в него поместить такие свойства:
-//     - count - сюда передается ответ на первый вопрос
-//     - movies - в это свойство поместить пустой объект
-//     - actors - тоже поместить пустой объект
-//     - genres - сюда поместить пустой массив
-//     - privat - в это свойство поместить boolean(логическое) значение false
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-// 3) Задайте пользователю по два раза вопросы:
-//     - 'Один из последних просмотренных фильмов?'
-//     - 'На сколько оцените его?'
-// Ответы стоит поместить в отдельные переменные
-// Записать ответы в объект movies в формате: 
-//     movies: {
-//         'logan': '8.1'
-//     }
+if (personalMovieDB.count < 11) {
+    console.log('Просмотрено довольно мало фильмов');
+}   else if (personalMovieDB.count > 10 && personalMovieDB.count < 31 ) {
+    console.log('Вы классический зритель');
+}   else if (personalMovieDB.count > 30 ) {
+    console.log('Вы киноман');
+} else {
+    console.log('Произошла ошибка');
+}
 
-// Проверить, чтобы все работало без ошибок в консоли */
+for (let i = 0; i < 2; i++) {
+    const lastFilms = prompt('Один из последних просмотренных фильмов?', ''),
+          ratingFilms = prompt('На сколько оцените его?', '');
 
-// 'use strict';
+    if (lastFilms != null && ratingFilms != null && lastFilms != '' && ratingFilms != '' && lastFilms.length < 50) {
+        personalMovieDB.movies[lastFilms] = ratingFilms;
+        console.log('done');
+    }   else    {
+        console.log('error');
+        i--;
+    }
+}
 
-
-// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели', '');
-// const lastFilms = prompt('Один из последних просмотренных фильмов?', '');
-// const ratingFilms = prompt('На сколько оцените его?', '');
-// const moviesObj = {};
-// const actorsObg = {};
-// const genresArr = [];
-// const privatBool = false;
-
-
-// const personalMovieDB = {
-//     count: numberOfFilms,
-//     movies: moviesObj,
-//     actors: actorsObg,
-//     genres: genresArr,
-//     privat: privatBool
-// };
-
-// personalMovieDB['movies']['lastFilms'] = ratingFilms;
-
-// console.log(personalMovieDB)
+console.log(personalMovieDB);

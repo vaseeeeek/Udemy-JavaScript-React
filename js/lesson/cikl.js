@@ -1,29 +1,14 @@
-// const num = 50;
+let num = 1;
 
-// if (num == 49) {
-//     console.log('нихуя')
-// } else if (num == 48) {
-//     console.log('50')
-// } else {
-//     console.log('все остальное')
-// }
+while (num<55) {
+    console.log(num);
+    num++;
+}
 
-
-// (num == 48) ? console.log('нихуя') : console.log('все остальное');
-
-// const num = '50';
-
-// switch (num) {
-//     case 49:
-//         console.log('нихуя');
-//         break;
-//     case 100:
-//         console.log('нихуя');
-//         break;
-//     case 50:
-//         console.log('50');
-//         break;
-//     default:
-//         console.log('вообще нихуя');
-//         break;
-// }
+for (let i = 1; i < 10; i++){
+    if (i == 6) {
+        // break; 
+        continue; // пропустить 6
+    }
+    console.log(i);
+}
