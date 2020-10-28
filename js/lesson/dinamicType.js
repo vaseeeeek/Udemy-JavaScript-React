@@ -2,28 +2,28 @@
 
 // 1)
 
-console.log(typeof(String(null)));
-console.log(typeof(String(4)));
+// console.log(typeof(String(null)));
+// console.log(typeof(String(4)));
 
 // 2)
 
-console.log(typeof(5 + ''));
+// console.log(typeof(5 + ''));
 
 // To number
 
 // 1
 
-console.log(typeof(Namber(4)));
+// console.log(typeof(Namber(4)));
 
 // 2 
 
-console.log(typeof(+'5'));
+// console.log(typeof(+'5'));
 
 // 3 
 
-console.log(parseInt("15px", 10));
+// console.log(parseInt("15px", 10));
 
-let answer = +("Hello", "");
+// let answer = +("Hello", "");
 
 // To boolean
 
