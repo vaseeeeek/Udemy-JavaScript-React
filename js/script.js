@@ -1,82 +1,74 @@
-<<<<<<< HEAD
-// To string
+const box = document.getElementById('box');
 
-// 1)
+console.log(box); // 1 элемент с id box
 
-console.log(typeof(String(null)));
-console.log(typeof(String(4)));
+box.style.backgroundColor = 'blue'; //-- старый способ
+box.style.width = '599px'; //-- старый способ
 
-// 2)
+///////////////////
 
-console.log(typeof(5 + ''));
+const num = 300;
 
-// To number
+box.style.cssText = 'background:#000; width: ${num}px;';
 
-// 1
+////////////////////////
 
-console.log(typeof(Namber(4)));
+const btns = document.getElementsByTagName('button');
 
-// 2 
+console.log(btns); // массив с всеми элементами button 
 
-console.log(typeof(+'5'));
+//////////////////////////
 
-// 3 
+const circles = document.getElementsByClassName('circle');
 
-console.log(parseInt("15px", 10));
+console.log(circles); //массив с всеми элеменами класса circle
 
-let answer = +("Hello", "");
+//////////////////////////
 
-// To boolean
+const hearts = document.querySelectorAll('.heart');
 
-// 1)
+console.log(hearts); // массив элементов с классом heart
 
-// 0, null, '', undefined, NaN; -- false
+hearts.forEach(item => {
+    console.log(item);
+});
 
-// let switcher = null;
+///////////////////////////
 
-// if (switcher) {
-//     console.log('working');
-// } else {
-//     console.log('no working')
-// }
+const hearts = document.querySelector('.heart');
 
-// switcher = 1;
+console.log(hearts); //вывод первый элемент .heart
 
-// if (switcher) {
-//     console.log('working');
-// } else {
-//     console.log('no working')
-// }
+hearts.forEach(item => {
+    item.style.cssText = 'background: #333';
+});
 
-// 2)
+const div = document.createElement('div'); // Создать элемент
+document.createTextNode('Тут был я'); // Задать элементу текст
 
-// console.log(typeof(Boolean('4)))
+div.classList.add('black');
 
-// 3)
+document.body.append(div); // добавить в конец body div 
 
-// console.log(typeof(!!'4'))
-=======
-"use strict"
+const wrapper = document.querySelector('.wrapper');
+document.querySelector('.wrapper').append(div); // добавить элемент див в wrapper конекц
 
-const soldier = {
-  chlen: '9m',
-  health: 100,
-  armor: 200
-}
+document.querySelector('.wrapper').prepend(div); // добавить элемент див в wrapper в начало 
 
+hearts[0].before(div); // перед 1 сердцем див
+hearts[0].after(div); // после 1 сердцем див
 
-// const vaseeeeeek = {
-//   chlen: '10m'
-// }
+wrapper.insertBefore(div, hearts[0]); // в родителе враппер втавить div перед hearts[0 ]  -- старый способ
 
-// Object.setPrototypeOf(vaseeeeeek, soldier)
-
-// console.log(vaseeeeeek);
+circles[0].remove; //удалить 1 кружечек (элемент) 
+wrapper.removeChild(hearts[1]);  //-- старый способ // удалить hearts[1] из wrapper
 
 
+hearts[0].replaceWith(circles[0]);  // заменить hearts[0] на circles[0]
+wrapper.replaceChild(circles[0], hearts[0]); // заменть сирклес на хеартс в враппере
+
+div.innerHTML = "<h1>hello world<h1>" // в див добавить html
+
+div.insertAdjacentElement('before', '<h2>hello world</h2>'); // вставить до после элемениа 'div' - <h2>hello world</h2>
 
 
-
-const vaseeeeeek = Object.create(soldier);
-console.log(vaseeeeeek.chlen);
->>>>>>> 79ec98b58a77dfa3ef473de4983dfb2efb7a8adb
