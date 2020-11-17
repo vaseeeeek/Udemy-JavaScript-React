@@ -1,24 +1,16 @@
-'uce strict';
-
-class Rectangle {
-    constructor(height, width) { // класс обьекта 
-        this.height = height;
-        this.width = width;
+const persone = {
+    name: 'Alex',
+    Age: '25',
+    parents: {
+        mom: 'Tatiana',
+        dad: 'Victor'
     }
+};
 
-    calcArea () { // метод возвращающий площадь
-        return this.height * this.width;
-    }
-}
 
-class ColoredRectangleWithText extends Rectangle { // создание класса ColoredRectangleWithText дочернего от Rectangle
-    constructor (height, width, text, bgColor) {
-        super(height, width); // забрать конструктор из класса Rectangle, super должен быть всегда первой строчкой c указанием нужных свойств
-        this.text = text;
-        this.bgColor = bgColor;
-    }
-}
 
-const square = new Rectangle(10, 10); // создание обьекта класса Rectangle
+console.log(JSON.stringify(persone)); // перевод persone в форма JSON который поддерживается сервером для принятия данных -JSON.stringify
 
-console.log(square.calcArea());
+console.log(JSON.parse(JSON.stringify(persone))); // перевод с JSON формата в обычный - JSON.parsse
+
+const clone = JSON.parse(JSON.stringify(persone)); // создание клона переменной persone
